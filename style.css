@@ -1,0 +1,137 @@
+/* Sullivan Technologies — single page. Dark, black & blue, futuristic. */
+
+:root{
+  --bg:#080c14;
+  --bg-2:#0b1220;
+  --panel:#0e1626;
+  --line:#1a2740;
+  --navy:#0f172a;
+  --blue:#1d4ed8;
+  --blue-2:#2563eb;
+  --cyan:#38bdf8;
+  --cyan-soft:#60a5fa;
+  --text:#e2e8f0;
+  --muted:#94a3b8;
+  --dim:#64748b;
+  --white:#ffffff;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:"Segoe UI","Helvetica Neue",Arial,sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+a{color:var(--cyan);text-decoration:none}
+a:hover{color:var(--cyan-soft)}
+img{max-width:100%;display:block}
+.wrapper{max-width:1120px;margin:0 auto;padding:0 24px}
+
+/* ---- Header (nav only, no brand) ---- */
+.site-header{
+  position:sticky;top:0;z-index:50;
+  background:rgba(8,12,20,0.82);
+  backdrop-filter:blur(10px);
+  -webkit-backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);
+}
+.header-inner{
+  display:flex;align-items:center;justify-content:center;
+  padding:14px 24px;max-width:1120px;margin:0 auto;gap:16px;
+}
+.nav-links{display:flex;align-items:center;gap:28px;z-index:1}
+.nav-links a{color:var(--muted);font-size:14px;letter-spacing:0.3px;transition:color .15s}
+.nav-links a:hover{color:var(--cyan)}
+.nav-cta{
+  background:var(--blue);color:var(--white);
+  border:1px solid var(--blue-2);border-radius:6px;
+  padding:9px 16px;font-size:13px;font-weight:600;letter-spacing:0.3px;
+  transition:background .15s,border-color .15s;
+}
+.nav-cta:hover{background:var(--blue-2);border-color:var(--cyan)}
+
+/* ---- Brand Banner (top center, large) ---- */
+.brand-banner{
+  padding:40px 0 32px;
+  border-bottom:1px solid var(--line);
+}
+.brand-banner-link{
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  text-decoration:none;color:var(--text);gap:10px;
+}
+.brand-banner-logo{
+  width:140px;height:140px;flex-shrink:0;display:block;
+  image-rendering:auto;
+}
+.brand-banner-name{
+  font-weight:700;font-size:44px;letter-spacing:0.5px;
+  color:var(--text);line-height:1.1;text-align:center;
+}
+
+/* ---- About ---- */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+.about-text h2{font-size:28px;font-weight:700;line-height:1.25;margin-bottom:16px}
+.about-text p{color:var(--muted);font-size:15px;line-height:1.65;margin-bottom:12px}
+.about-links{display:flex;gap:16px;margin-top:12px}
+.about-links a{color:var(--cyan);text-decoration:none;font-size:14px;display:flex;align-items:center;gap:8px}
+.about-links a:hover{color:var(--cyan-soft)}
+.about-links svg{width:20px;height:20px;display:block;flex-shrink:0;color:inherit}
+.about-svg{width:20px;height:20px;display:block;flex-shrink:0}
+.about-image{width:100%;aspect-ratio:1;display:flex;justify-content:center;align-items:center}
+.about-image svg{width:100%;height:100%;max-width:260px;max-height:260px}
+
+/* ---- Steps ---- */
+.steps{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:8px}
+.step{background:rgba(56,189,248,0.04);border:1px solid var(--line);border-radius:10px;padding:22px;display:flex;flex-direction:column;gap:10px}
+.step h3{font-size:16px;font-weight:600;color:var(--text);line-height:1.35}
+.step p{color:var(--muted);font-size:13.5px;line-height:1.55}
+
+/* ---- Contact / Form ---- */
+.contact{padding:56px 0}
+.contact-inner{max-width:680px}
+.form-max{background:rgba(14,22,38,0.5);border:1px solid var(--line);border-radius:10px;padding:28px}
+.field-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.field{margin-bottom:16px}
+.field label{display:block;font-size:13px;color:var(--muted);margin-bottom:6px;letter-spacing:0.3px}
+.field input,.field textarea{width:100%;background:var(--bg-2);border:1px solid var(--line);border-radius:6px;padding:10px 14px;color:var(--text);font-size:14px;font-family:inherit;line-height:1.5;resize:vertical}
+.field input:focus,.field textarea:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 2px rgba(56,189,248,0.15)}
+.form-note{margin:0;color:var(--muted);font-size:12.5px;line-height:1.5}
+.form-submit{margin-top:8px}
+
+/* ---- Footer ---- */
+.footer-grid{display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px;align-items:flex-start}
+.footer-brand{max-width:340px}
+.footer-brand .brand-name{font-size:15px}
+.footer-brand p{color:var(--dim);font-size:12.5px;margin-top:6px;line-height:1.55;max-width:320px}
+.footer-links{display:flex;flex-wrap:wrap;gap:10px}
+.footer-links a{color:var(--muted);font-size:13px;border:1px solid var(--line);padding:7px 12px;border-radius:6px;transition:border-color .15s,color .15s}
+.footer-links a:hover{border-color:var(--cyan);color:var(--cyan)}
+.footer-bottom{width:100%;margin-top:24px;padding-top:18px;border-top:1px solid var(--line);
+  display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;color:var(--dim);font-size:12px}
+
+/* ---- Formspree activation banner ---- */
+.fs-banner{display:none;background:rgba(30,78,216,0.08);border:1px dashed rgba(56,189,248,0.4);
+  border-radius:8px;padding:12px 14px;margin-top:14px;font-size:12px;color:var(--cyan-soft);line-height:1.5}
+.form-row-auto{display:flex;flex-direction:column}
+
+/* ---- Cards ---- */
+.card-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:36px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:24px;display:flex;flex-direction:column;gap:12px}
+.card h3{font-size:17px;font-weight:600;color:var(--text);line-height:1.35}
+.card p{color:var(--muted);font-size:13.5px;line-height:1.55}
+.card-icon{display:flex;justify-content:center;margin-bottom:6px}
+.card-icon svg{width:14px;height:14px;display:block;color:var(--cyan)}
+.card-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:4px}
+.tag{background:rgba(56,189,248,0.08);border:1px solid rgba(56,189,248,0.2);color:var(--cyan-soft);font-size:11px;padding:3px 8px;border-radius:20px;letter-spacing:0.3px}
+
+@media (max-width:680px){
+  .nav-links{display:none}
+  .hero{padding:60px 0 48px}
+  section{padding:56px 0}
+  .about-grid{grid-template-columns:1fr;gap:32px}
+  .field-row{grid-template-columns:1fr}
+  .form-max{padding:24px 18px}
+}

@@ -1,0 +1,29 @@
+# Python scripts / tooling (not site content)
+*.py
+*.pyc
+__pycache__/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# temp / backups
+*.tmp
+*.bak
+index_from_drive.html
+debug_*.png
+verify_*.png
+logo-check-*.png
+logo-from-disk.png
+logo-magenta*.png
+logo-500*.png
+logo-2000*.png
+logo-visual*.png
+logo-check-a.png
+logo-magenta-bg.png
+blank-*.png
+logo-check-trans.png
